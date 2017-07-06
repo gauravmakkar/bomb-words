@@ -1,0 +1,31 @@
+<div style="height:10%;background-color:lightcyan;clear:both;overflow:auto">
+    <div style="float:left;width:20%;background-color: lightgrey;height:100%;display: table">
+        <div style="display: table-cell;vertical-align: middle;text-align: center">
+            <div>Gaurav Makkar
+            </div>
+            <div>Sr. Software Engineer</div>
+        </div>
+    </div>
+    <div style="float:left;width: 60%;background-color: darkgray;height:100%;text-align: center;display:table">
+        <div style="display: table-cell;vertical-align: middle">
+            <div>World's highest
+                mountain
+            </div>
+            <div><span data-ng-repeat="char in currentWord track by $index" data-ng-bind="char"></span><span
+                    ng-if="currentWord.length===0"></span></div>
+        </div>
+    </div>
+    <div style="float:right;width:20%;background-color: lightgrey;height:100%;display: table">
+        <div style="display: table-cell;vertical-align: middle;text-align: center">
+            <div>Your Score
+            </div>
+            <div>120</div>
+        </div>
+    </div>
+
+</div>
+<div class="grid2x2">
+    <div class="box box1" data-ng-repeat="box in matrix track by $index" ng-click="addToTheWord($index)">
+        <div ng-class="{blur:box.added}" class="text" data-ng-bind="box.text"></div>
+    </div>
+</div>
